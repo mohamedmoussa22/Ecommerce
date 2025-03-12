@@ -1,5 +1,6 @@
 package com.moussa.spring_boot_ecommerce.config;
 
+
 import com.moussa.spring_boot_ecommerce.entity.Product;
 import com.moussa.spring_boot_ecommerce.entity.ProductCategory;
 import org.springframework.context.annotation.Configuration;
