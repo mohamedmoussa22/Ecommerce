@@ -12,8 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductListComponent {
 
   products : Product[] = [];
-  constructor(private productService:ProductService ,
-    private activedRoute : ActivatedRoute){}
+  constructor(private productService:ProductService , private activedRoute : ActivatedRoute){}
   currentCategoryId !:number;
 
 
