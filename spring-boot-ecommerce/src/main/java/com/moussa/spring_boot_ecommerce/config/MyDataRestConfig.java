@@ -13,11 +13,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
 
-    private EntityManager entityManager;
-
-    public MyDataRestConfig(EntityManager theEntityManager) {
-        entityManager = theEntityManager;
-    }
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
@@ -39,6 +34,4 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         config.exposeIdsFor(Product.class, ProductCategory.class);
     }
 
-    private void exposIds(RepositoryRestConfiguration config) {
-    }
 }
