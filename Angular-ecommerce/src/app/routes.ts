@@ -7,6 +7,10 @@ export const routes: Routes = [
     component: ProductListComponent,
   },
   {
+    path: 'search/:keyword',
+    component: ProductListComponent,
+  },
+  {
     path: 'category',
     component: ProductListComponent,
   },
