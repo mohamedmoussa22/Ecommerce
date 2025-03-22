@@ -30,10 +30,41 @@ export class ProductService {
       .get<GetResponseProduct>(searchUrl)
       .pipe(map((response) => response._embedded.products));
   }
+
+  getProductListPaginate(
+    thePage: number,
+    thePageSize: number,
+    categoryId: Number
+  ): Observable<GetResponseProduct> {
+    const searchUrl =
+      `${this.baseUrl}/search/findByCategoryId?id=${categoryId}` +
+      `&page=${thePage}` +
+      `&size=${thePageSize}`;
+    return this.httpClient.get<GetResponseProduct>(searchUrl);
+  }
+
+  
+  searchProductListPaginate(
+    thePage: number,
+    thePageSize: number,
+    keyWord: string
+  ): Observable<GetResponseProduct> {
+    const searchUrl =
+      `${this.baseUrl}/search/findByNameContaining?name=${keyWord}` +
+      `&page=${thePage}` +
+      `&size=${thePageSize}`;
+    return this.httpClient.get<GetResponseProduct>(searchUrl);
+  }
 }
 
 interface GetResponseProduct {
   _embedded: {
     products: Product[];
+  };
+  page: {
+    size: number;
+    totalElements: number;
+    totalPages: number;
+    number: number;
   };
 }
