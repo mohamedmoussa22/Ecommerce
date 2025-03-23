@@ -707,6 +707,10 @@ table.table.table-bordered th{
     outline:0;
     margin-left:5px
 }
+table button.btn {
+    background-color: var(--bs-btn-bg) !important;
+    box-shadow: none !important;
+  }
 
 /* 
  * ----------------------------
