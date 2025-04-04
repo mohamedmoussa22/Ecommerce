@@ -514,7 +514,7 @@ input.au-input.au-input-xl{
     background:#fff
 }
 .main-content.page-m{
-    padding:10% 15%!important
+    padding:10% 30% 10% 5%
 }
 
 /* 
@@ -707,10 +707,10 @@ table.table.table-bordered th{
     outline:0;
     margin-left:5px
 }
-table button.btn {
+/* table button.btn {
     background-color: var(--bs-btn-bg) !important;
     box-shadow: none !important;
-  }
+  } */
 
 /* 
  * ----------------------------
